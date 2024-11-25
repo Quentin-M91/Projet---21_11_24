@@ -6,82 +6,58 @@
     font-size: normal;
 }
 
-/* Application de la police sur tous les titres     #7979F4  #FF0000*/
+body {
+    background-image: url(../Ressources/Image/Fond.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Application de la police sur tous les titres */
 h1,
 h2,
 h3,
 h4,
 h5 {
     font-family: 'compass';
+    color: white;
 }
 
-p {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+p,
+ul,
+li {
+    color: white;
 }
-
 
 /* En-tête */
 header {
-    background: linear-gradient(to left, #FF00D5 0%, white 30%, white 70%,  #00F7FF 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%,   black 80%);
     color: black;
     padding: 20px 0;
 }
 
 header .container {
-    /* classe flexbox, qui contient des blocks et gère leurs disposition . Elle contient un titre et un nav */
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
     padding: 0 20px;
 }
 
 header .container a {
-    color: black;
+    color: white;
     font-style: italic;
 }
 
 .logo {
-    display: ;
-    width: 300px;
+    width: 150px;
     border-radius: 120px;
 }
 
 /* -------------------------------------------------------- Main -------------------------------------------------------- */
-.hero {
-    background: linear-gradient(to left, #FFFFFF, #ACC8E0);
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.hero h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #0078ff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 25px;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
 main .container {
-    background: linear-gradient(to bottom, red, black);
     display: flex;
-    flex-wrap: wrap;
-    height: auto;
+    /*flex-wrap: wrap;*/
+
 }
 
 /* ----------------------------------------------- Section Expérience --------------------------------------------------------------- */
@@ -89,10 +65,8 @@ main .container {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    background-color: #fff;
     max-width: 55%;
-    height: 40%;
-    border: solid 1px;
+    /*border: solid 1px;*/
 }
 
 .experiences-pro h2 {
@@ -110,7 +84,7 @@ main .container {
 }
 
 .experiences {
-    background-color: #f9f9f9;
+    background-color: #000000ec;
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 20px;
@@ -132,11 +106,11 @@ main .container {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    background-color: #fff;
+
     max-width: 850px;
     width: 40%;
     margin: auto;
-    border: solid 1px;
+    /*border: solid 1px;*/
 } 
 
 .formation-education h2 {
@@ -154,7 +128,7 @@ main .container {
 }
 
 .formation {
-    background-color: #f9f9f9;
+    background-color: #000000ec;
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 20px;
@@ -181,7 +155,7 @@ main .container {
 }
 
 .competences {
-    background-color: #f9f9f9;
+    background-color: #000000ec;
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 20px;
@@ -203,11 +177,17 @@ main .container {
 .lien-pro {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 40px 20px;
-    background-color: #fff;
     width: 40%;
-    border: solid 1px;
+    /*border: solid 1px;*/
 } 
+
+.lien-pro h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
 
 .list-lien {
     display: flex;
@@ -218,11 +198,16 @@ main .container {
 }
 
 .lien {
-    background-color: #f9f9f9;
+    background-color: #000000ec;
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 20px;
     transition: transform 0.3s ease;
+}
+
+.lien a {
+    color: white;
+    font-style: italic;
 }
 
 .lien:hover {
@@ -265,8 +250,8 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Pour les tablettes (largeur max de 768px) */
-@media (max-width: 768px) {
+/* Pour les tablettes (largeur max de 1000px) */
+@media (max-width: 1000px) {
 
     /* En-tête */
     header .container {
@@ -274,23 +259,23 @@ footer ul li a:hover {
         align-items: flex-start;
     }
 
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
+    main, aside {
+        display: inline-block;
+    }
+    
+    .logo {
+        display: none;
     }
 
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    /* Produits */
+    /* Expérience */
     .experiences {
         width: 45%;
-        /* Deux produits côte à côte */
+    }
+
+
+    .formation-education {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -301,31 +286,10 @@ footer ul li a:hover {
         text-align: center;
     }
 
-    header nav ul {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    /* Section Hero */
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .cta-button {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-    }
-
-    /* Produits */
+    /* Expériences */
     .experiences {
         width: 90%;
-        /* Un prduit par ligne */
+        /* Une expérience par ligne */
         margin: 0 auto;
     }
 
