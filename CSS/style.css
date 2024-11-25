@@ -56,8 +56,8 @@ header .container a {
 /* -------------------------------------------------------- Main -------------------------------------------------------- */
 main .container {
     display: flex;
-    /*flex-wrap: wrap;*/
-
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 /* ----------------------------------------------- Section Expérience --------------------------------------------------------------- */
@@ -65,7 +65,7 @@ main .container {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    max-width: 55%;
+    max-width: 40%;
     /*border: solid 1px;*/
 }
 
@@ -106,10 +106,8 @@ main .container {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-
     max-width: 850px;
-    width: 40%;
-    margin: auto;
+    width: 25%;
     /*border: solid 1px;*/
 } 
 
@@ -179,7 +177,7 @@ main .container {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    width: 40%;
+    width: 22%;
     /*border: solid 1px;*/
 } 
 
@@ -256,26 +254,28 @@ footer ul li a:hover {
     /* En-tête */
     header .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    main, aside {
+    .container {
+        justify-content: center;
+    }
+
+    aside {
         display: inline-block;
     }
-    
-    .logo {
-        display: none;
-    }
 
-    /* Expérience */
-    .experiences {
-        width: 45%;
+    .experiences-pro {
+        width: 60%;
+        /* Deux produits côte à côte */
     }
-
 
     .formation-education {
-        display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
     }
 }
 
@@ -288,16 +288,12 @@ footer ul li a:hover {
 
     /* Expériences */
     .experiences {
-        width: 90%;
-        /* Une expérience par ligne */
-        margin: 0 auto;
+        width: 100%;
+        /* Une expérience par ligne */     
     }
 
-    /* Pied de page */
-    footer ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
+    .
+
+
 }
 
