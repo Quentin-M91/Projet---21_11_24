@@ -37,35 +37,18 @@ header .container {
     padding: 0 20px;
 }
 
-/* header + nav 
-header h1 a {
-    font-size: 1em;
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+header .container a {
+    color: black;
     font-style: italic;
-    font-family: cursive;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}*/
+.logo {
+    display: ;
+    width: 300px;
+    border-radius: 120px;
+}
 
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* Main */
+/* -------------------------------------------------------- Main -------------------------------------------------------- */
 .hero {
     background: linear-gradient(to left, #FFFFFF, #ACC8E0);
     text-align: center;
@@ -94,14 +77,21 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-/* Section Expérience */
+main .container {
+    background: linear-gradient(to bottom, red, black);
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+/* ----------------------------------------------- Section Expérience --------------------------------------------------------------- */
 .experiences-pro {
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     padding: 40px 20px;
     background-color: #fff;
-    max-width: 40%;
-    margin: auto;
+    max-width: 55%;
+    height: 40%;
     border: solid 1px;
 }
 
@@ -137,14 +127,14 @@ nav ul li a:hover {
     margin: 15px 0;
 }
 
-/* Section Formation */
+/* ------------------------------------------------- Section Formation -------------------------------------------------------------- */
 .formation-education {
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     padding: 40px 20px;
     background-color: #fff;
-    max-width: 450px;
-    width:30%;
+    max-width: 850px;
+    width: 40%;
     margin: auto;
     border: solid 1px;
 } 
@@ -181,7 +171,71 @@ nav ul li a:hover {
     margin: 15px 0;
 }
 
-/* Pied de Page */
+/* -------------------------------------------------- Section Compétences ---------------------------------------------------------- */
+.list-competence {
+    display: flex;
+    justify-content: space-around;
+    /* flex wrap permet le retour à la ligne */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.competences {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.competences:hover {
+    transform: translateY(10px);
+    /* Animation */
+}
+
+.competences h3 {
+    font-size: 1em;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* ------------------------------------------------- Section Lien ------------------------------------------------------------------ */
+.lien-pro {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: #fff;
+    width: 40%;
+    border: solid 1px;
+} 
+
+.list-lien {
+    display: flex;
+    justify-content: space-around;
+    /* flex wrap permet le retour à la ligne */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.lien {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.lien:hover {
+    transform: translateY(10px);
+    /* Animation */
+}
+
+.lien h3 {
+    font-size: 1em;
+    margin: 15px 0;
+    text-align: center;
+}
+/* -------------------------------------------------------- Pied de Page -------------------------------------------------------- */
 footer {
     background-color: #333;
     color: #fff;
